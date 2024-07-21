@@ -25,7 +25,7 @@ This guide explains how to use the scripts for training and testing within the p
 To enhance the training process, you can perform data augmentation using the following command:
 
 ```python
-python data_augmentation.py --input_prefix v1/Urdu/Urdu --output_prefix v1/Urdu/Urdu --factor 6
+python data_augmentation.py --input_prefix v1/Urdu/Urdu_voices_train --output_prefix v1/Urdu/Urdu_voices_train_filtered_6 --factor 6
 ```
 
 ## Training
@@ -37,7 +37,7 @@ python main.py --lr 0.001 --train_lang Urdu --batch_size 64 --epochs 52 --fusion
 ```
 ## Score Polarization Strategy
 
-For the obtained L2 scores, refer to the following for Score Polarization:
+For the obtained L2 scores, refer to the following for score polarization:
 
 ```python
 python score_polarization.py path/to/face_images path/to/audio_files score_folder1 score_folder2
